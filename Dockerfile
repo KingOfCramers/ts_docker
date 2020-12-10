@@ -13,6 +13,9 @@ RUN npm install
 # Copy all files except for those specified in the .dockerignore file (node_modules)
 COPY . .
 
+# Copy environment
+COPY .env.production /app
+
 # Build and run the index file
 CMD npm run start:prod
 
