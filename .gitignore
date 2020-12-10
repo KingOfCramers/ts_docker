@@ -1,0 +1,15 @@
+# Distribution
+dist
+# Node Modules
+node_modules
+
+# Environment files
+.env.*
+
+# MACOS Files
+.DS_Store
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
