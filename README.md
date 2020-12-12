@@ -14,11 +14,11 @@ Once docker is installed, install the packages:
 
 # Environment
 
-The development environment here uses `ts-node` and `nodemon` to serve up your server locally.
-
-In order to build both the image and run in development, this project relies on `.env` files in the root of the project.
+The development environment uses `ts-node` and `nodemon` to serve locally. You store the variables in the `.env.development` file, which are loaded via `dotenv`
 
 The different required variables for these files can be found in the `modules.d.ts` file.
+
+In production, you can either specify the the path of your environment variables with Docker's `--env-file` flag, or pass each variable individually via the `-e` flag. The mandatory environment variables are still contained in the `modules.d.ts` file.
 
 # Development
 
