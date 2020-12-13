@@ -28,4 +28,6 @@ After configuring your `.env.development` file, run `yarn dev` which will spin u
 
 Build your Docker image. You can then pass the required environment variables from a `.env.production` file on your server with the following command:
 
-`docker run -it --env-file .env.production -p 3000:3000 name-of-image`
+`docker run -p:80:3000 --env-file .env.production -dit --name ts-docker kingofcramers/typescript-docker:lite`
+
+This command exposes the container's port 3000 to your port 80, passes the .env.production file to configure the server (presumably on port 3000), and runs the application in detached interactive mode and gives you access to the terminal, and names it "ts-docker"
